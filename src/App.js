@@ -1,12 +1,14 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
+import Sidebar from './components/Sidebar/Sidebar';
+import MainContainer from './components/MainContainer/MainContainer';
 function App() {
   return (
     <div className='homeContainer'>
-      <div style={{backgroundColor: 'red'}}></div>
+      <Navbar/>
       <div className='bodyContainer'>
-        <div style={{backgroundColor: 'green'}}></div>
-        <div style={{backgroundColor: 'blue'}}></div>
+        <Sidebar/>
+        <MainContainer />
       </div>
     </div>
   );

@@ -1,0 +1,9 @@
+.NavbarItem{
+    display: flex;
+    background-color: aqua;
+    min-width: 9.5%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 5px;
+}

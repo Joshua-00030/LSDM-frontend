@@ -1,0 +1,10 @@
+.SidebarItem{
+    display: flex;
+    background-color: aqua;
+    min-width: 10%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

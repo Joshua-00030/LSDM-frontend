@@ -1,0 +1,12 @@
+.SearchCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 30px;
+    background-color: blueviolet;
+}
+
+.CardTitle{
+    max-height: 2rem;
+}

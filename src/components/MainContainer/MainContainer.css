@@ -1,0 +1,10 @@
+.MainContainer {
+    background-color: blue;
+    display: flex;
+}
+
+.CardContainer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 20%);
+}

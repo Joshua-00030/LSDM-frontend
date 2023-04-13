@@ -1,16 +1,12 @@
-//import './Navbar.css'
-import { useEffect, useState } from 'react';
-import { IconContext } from "react-icons";
-import { FaSearch } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './Navbar.css'
+import { useState } from 'react';
+import NavbarItem from '../NavbarItem/NavbarItem';
 const Navbar = () => {
-    const [searchQuery, setSearchQuery] = useState("")
-    const [sortType, setSortType] = useState("0")
+    const [orgs, setOrgs] = useState(['Home','nsf','nih','doe','doj'])
 
     return(
-        <div>
-            <p>hello</p>
-        
+        <div className='Navbar'>
+            {orgs.map(org => <NavbarItem label={org}/>)}
         </div>
     )
 
