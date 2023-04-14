@@ -4,6 +4,7 @@
     align-items: center;
     margin: 5px;
     border-radius: 30px;
+    min-height: 10rem;
     background-color: blueviolet;
 }
 
