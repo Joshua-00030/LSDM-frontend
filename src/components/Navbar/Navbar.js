@@ -17,7 +17,7 @@ const Navbar = ({setOrg, orgs, org}) => {
         <div className={`NavSearch${(org ? 'Expanded': 'Collapsed')}`}>
 
             <div className='Navbar'>
-                {orgs.map(org => <NavbarItem label={org} key={org} setOrg={setOrg} setSearchTerms={setSearchTerms}/>)}
+                {orgs.map(o => <NavbarItem label={o} key={o} org={org} setOrg={setOrg} setSearchTerms={setSearchTerms}/>)}
             </div>
             {searchTerms&&
             <div className='NavbarSearchTerms'>
