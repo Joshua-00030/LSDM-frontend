@@ -6,9 +6,12 @@ const Navbar = ({setOrg, orgs, org}) => {
     const [searchTerms, setSearchTerms] = useState([])
     const [searchTermValues, setSearchTermValues] = useState([])
     useEffect(() => {
-        setSearchTermValues(searchTerms.map(term => {
+        setSearchTermValues(
+            searchTerms ?
+            searchTerms.map(term => {
             return {label: term, value: ''}
-        }))
+        })
+        :null)
     },[searchTerms])
     return(
         <div className={`NavSearch${(org ? 'Expanded': 'Collapsed')}`}>
@@ -16,10 +19,12 @@ const Navbar = ({setOrg, orgs, org}) => {
             <div className='Navbar'>
                 {orgs.map(org => <NavbarItem label={org} key={org} setOrg={setOrg} setSearchTerms={setSearchTerms}/>)}
             </div>
+            {searchTerms&&
             <div className='NavbarSearchTerms'>
                 {searchTerms.map(term => <NavbarSearchTerm label={term} setSearchTermValues={setSearchTermValues} searchTermValues={searchTermValues} key={term}/>)}
                 {searchTerms && <button>Search</button>}
             </div>
+            }
         </div>
     )
 
