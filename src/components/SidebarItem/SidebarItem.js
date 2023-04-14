@@ -1,8 +1,8 @@
 import './SidebarItem.css'
-const SidebarItem = ({label}) => {
+const SidebarItem = ({setOrg, label}) => {
 
     return(
-        <div className='SidebarItem'>
+        <div className='SidebarItem' id={label} onClick={()=>setOrg(label)}>
             <span>
                 {label}
             </span>

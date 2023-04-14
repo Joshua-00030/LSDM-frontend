@@ -4,3 +4,19 @@
     justify-content: start;
     gap: 5%;
 }
+.NavSearchCollapsed{
+    display: grid;
+    grid-template-rows: 1fr 0;
+}
+.NavSearchExpanded{
+    display: grid;
+    grid-template-rows: 1fr 1.3fr;
+}
+.NavbarSearchTerms{
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.NavbarInput{
+}

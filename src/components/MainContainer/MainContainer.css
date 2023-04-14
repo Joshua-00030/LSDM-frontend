@@ -1,8 +1,5 @@
-.MainContainer {
-    background-color: blue;
-}
-
 .CardContainer{
+    background-color: blue;
     display: grid;
     width: 100%;
     overflow: scroll;

@@ -1,9 +1,0 @@
-.homeContainer{
-  display:grid;
-  grid-template-rows: 1fr 8fr;
-  height: 100vh;
-}
-.bodyContainer{
-  display: grid;
-  grid-template-columns: 1fr 9fr;
-}

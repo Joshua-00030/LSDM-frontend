@@ -1,9 +1,16 @@
 import axios from 'axios'
-const baseUrl = ''
+const baseUrl = 'http://localhost:3001'
 
 const search = async props => {
-  const response = await axios.post(baseUrl+'login', props)
+  console.log(props)
+  const response = await axios.post(baseUrl+'/testdata/nih', props)
   return response.data
 }
 
-export default { search }
+const getColumns = async props => {
+  console.log(props)
+  const response = await axios.get(baseUrl+'/testdata/' + props)
+  return response.data
+}
+
+export default { search, getColumns }

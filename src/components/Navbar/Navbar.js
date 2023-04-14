@@ -1,12 +1,25 @@
 import './Navbar.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavbarItem from '../NavbarItem/NavbarItem';
-const Navbar = () => {
-    const [orgs, setOrgs] = useState(['Home','nsf','nih','doe','doj'])
-
+import NavbarSearchTerm from '../NavbarSearchTerm/NavbarSearchTerm';
+const Navbar = ({setOrg, orgs, org}) => {
+    const [searchTerms, setSearchTerms] = useState([])
+    const [searchTermValues, setSearchTermValues] = useState([])
+    useEffect(() => {
+        setSearchTermValues(searchTerms.map(term => {
+            return {label: term, value: ''}
+        }))
+    },[searchTerms])
     return(
-        <div className='Navbar'>
-            {orgs.map(org => <NavbarItem label={org}/>)}
+        <div className={`NavSearch${(org ? 'Expanded': 'Collapsed')}`}>
+
+            <div className='Navbar'>
+                {orgs.map(org => <NavbarItem label={org} key={org} setOrg={setOrg} setSearchTerms={setSearchTerms}/>)}
+            </div>
+            <div className='NavbarSearchTerms'>
+                {searchTerms.map(term => <NavbarSearchTerm label={term} setSearchTermValues={setSearchTermValues} searchTermValues={searchTermValues} key={term}/>)}
+                {searchTerms && <button>Search</button>}
+            </div>
         </div>
     )
 

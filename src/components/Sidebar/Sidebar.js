@@ -1,12 +1,11 @@
 import './Sidebar.css'
 import { useState } from 'react';
 import SidebarItem from '../SidebarItem/SidebarItem';
-const Sidebar = () => {
-    const [orgs, setOrgs] = useState(['nsf','nih','doe','doj'])
+const Sidebar = ({orgs, setOrg}) => {
 
     return(
         <div className='Sidebar'>
-            {orgs.map(org => <SidebarItem label={org}/>)}
+            {orgs.map(org => <SidebarItem label={org} key={org} setOrg={setOrg}/>)}
         
         </div>
     )

@@ -1,10 +1,15 @@
 import './SearchCard.css'
-const SearchCard = ({data}) => {
+
+const SearchCard = ({data, handleClick, newData, id}) => {
 
     return(
-        <div className='SearchCard'>
+        <div className='SearchCard' onClick={()=>handleClick((newData ? newData : 'id'))} id={id}>
+            
             <span className='CardTitle'>
-                {data}
+            {newData ? 
+            newData:
+                data
+            }
             </span>
         </div>
     )
