@@ -1,4 +1,15 @@
-.CardContainer{
+.CardContainer {
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    overflow: scroll;
+    min-height: 100%;
+    align-content: flex-start
+}
+
+.default {
     background-color: blue;
     display: grid;
     width: 100%;

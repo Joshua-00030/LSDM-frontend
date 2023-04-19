@@ -1,14 +1,35 @@
 .SearchCard{
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: .2rem;
+    border-radius: 10px;
+    background-color: blueviolet;
+    max-width: 50%;
+}
+.Back{
+    background-color: lawngreen;
+    justify-content: center;
+    min-width: 5%;
+}
+
+.Abstract{
+    max-width: 100%;
+}
+
+.CardTitle{
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+}
+.defaultCard{
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
     border-radius: 30px;
     min-height: 10rem;
     background-color: blueviolet;
-}
-
-.CardTitle{
-    min-height: 2rem;
-    margin-left: 4px;
+    max-width: 100%;
 }

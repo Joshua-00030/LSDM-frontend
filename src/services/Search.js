@@ -7,10 +7,20 @@ const search = async props => {
   return response.data
 }
 
+const getProject = async props => {
+  const response = await axios.post(baseUrl+'/testdata/getProject', {title: props})
+  return response.data
+}
+
+const generalSearch = async props => {
+  const response = await axios.post(baseUrl+'/testdata/general', props)
+  return response.data
+}
+
 const getColumns = async props => {
   console.log(props)
   const response = await axios.get(baseUrl+'/testdata/' + props)
   return response.data
 }
 
-export default { search, getColumns }
+export default { search, getColumns, getProject, generalSearch }
