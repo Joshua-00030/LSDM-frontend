@@ -2,7 +2,8 @@ import './Navbar.css'
 import { useState, useEffect } from 'react';
 import NavbarItem from '../NavbarItem/NavbarItem';
 import NavbarSearchTerm from '../NavbarSearchTerm/NavbarSearchTerm';
-const Navbar = ({setOrg, orgs, org}) => {
+import SearchService from '../../services/Search';
+const Navbar = ({setOrg, orgs, org, handleNavbarSearch}) => {
     const [searchTerms, setSearchTerms] = useState([])
     const [searchTermValues, setSearchTermValues] = useState([])
     useEffect(() => {
@@ -21,8 +22,8 @@ const Navbar = ({setOrg, orgs, org}) => {
             </div>
             {searchTerms&&
             <div className='NavbarSearchTerms'>
-                {searchTerms.map(term => <NavbarSearchTerm label={term} setSearchTermValues={setSearchTermValues} searchTermValues={searchTermValues} key={term}/>)}
-                {searchTerms && <button>Search</button>}
+                {searchTerms.map(term => term !== 'index' ? <NavbarSearchTerm label={term} setSearchTermValues={setSearchTermValues} searchTermValues={searchTermValues} key={term}/> : <></>)}
+                {searchTerms && <button onClick={()=>handleNavbarSearch(searchTermValues)}>Search</button>}
             </div>
             }
         </div>

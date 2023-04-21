@@ -13,6 +13,7 @@ const getProject = async props => {
 }
 
 const generalSearch = async props => {
+  console.log(props)
   const response = await axios.post(baseUrl+'/testdata/general', props)
   return response.data
 }

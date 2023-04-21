@@ -3,7 +3,7 @@ import './SearchCard.css'
 const SearchCard = ({data, handleClick, newData, id, label, type}) => {
 
     return(
-        <div className={(`SearchCard${type ? type : ''}`)} onClick={()=>handleClick(data)} id={id}>
+        <div className={(`SearchCard${type ? type : ''}`)} onClick={handleClick ? ()=>handleClick(data) : null} id={id}>
             {label && 
             <>
                 <span>{label}</span>

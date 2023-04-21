@@ -13,10 +13,15 @@ const HomeContainer = () => {
     useEffect(() => {
         SearchService.search('term').then(res => setData(res))
     },[org])
+    
+    const handleNavbarSearch = (searchTermValues) => {
+        SearchService.generalSearch(searchTermValues).then(res => setData(res))
+    }
+    
     return (
         <div className={`homeContainer${(org ? 'Expanded' : '')}`}>
 
-            <Navbar setOrg={setOrg} orgs={orgs} org={org}/>
+            <Navbar setOrg={setOrg} orgs={orgs} org={org} handleNavbarSearch={handleNavbarSearch}/>
             <div className='bodyContainer'>
                 <Sidebar setOrg={setOrg} orgs={orgs.slice(1)}/>
                 <MainContainer setOrg={setOrg} org={org} data={data}/>
