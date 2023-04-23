@@ -23,8 +23,9 @@ const HomeContainer = () => {
 
             <Navbar setOrg={setOrg} orgs={orgs} org={org} handleNavbarSearch={handleNavbarSearch}/>
             <div className='bodyContainer'>
-                <Sidebar setOrg={setOrg} orgs={orgs.slice(1)}/>
+                <div className='side'></div>
                 <MainContainer setOrg={setOrg} org={org} data={data}/>
+                <div className='side'></div>
             </div>
         </div>
     )

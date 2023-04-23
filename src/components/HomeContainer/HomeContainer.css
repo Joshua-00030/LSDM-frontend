@@ -12,5 +12,9 @@
 
 .bodyContainer {
   display: grid;
-  grid-template-columns: 1fr 9fr;
+  grid-template-columns: 1fr 11fr 1fr;
+}
+
+.side{
+  background-color: #56A3A6;;
 }
