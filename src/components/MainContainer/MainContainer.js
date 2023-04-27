@@ -14,15 +14,13 @@ const MainContainer = ({ setOrg, org, data }) => {
     useEffect(() => {
 
         if (document.getElementById("4") !== null) {
-            const parentDiv = document.getElementById("4");
+            const parentDiv = document.getElementById("4")
             const childDiv = parentDiv.querySelector(".CardTitle")
-            const searchField = document.querySelector('#gsc-i-id1');
+            const searchField = document.querySelector('#gsc-i-id1')
             if (searchField) {
-                searchField.value = childDiv.textContent;
-                //searchField.closest('form').submit();
-                const searchButton = document.querySelector('.gsc-search-button-v2');
-                console.log(searchButton)
-                searchButton.click();
+                searchField.value = childDiv.textContent
+                const searchButton = document.querySelector('.gsc-search-button-v2')
+                searchButton.click()
             }
         }
     });
