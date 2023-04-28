@@ -10,6 +10,21 @@ const MainContainer = ({ setOrg, org, data }) => {
     const handleClick = async (term) => {
         setNewData(await SearchService.getProject(term))
     }
+
+    useEffect(() => {
+
+        if (document.getElementById("4") !== null) {
+            const parentDiv = document.getElementById("4")
+            const childDiv = parentDiv.querySelector(".CardTitle")
+            const searchField = document.querySelector('#gsc-i-id1')
+            if (searchField) {
+                searchField.value = childDiv.textContent
+                const searchButton = document.querySelector('.gsc-search-button-v2')
+                searchButton.click()
+            }
+        }
+    });
+
     return (
         <div className={(`CardContainer${newData.length < 1 ? ' default' : ''}`)}>
             {(newData.length < 1 ?
@@ -30,8 +45,8 @@ const MainContainer = ({ setOrg, org, data }) => {
             )}
             {cardArray.length > 1 ? cardArray : <></>}
             <div className='google_container' style={{ display: (cardArray.length !== 1 ? 'block' : 'none') }}>
-            <script async src="https://cse.google.com/cse.js?cx=d68939519b1834f27">
-            </script>
+                <script async src="https://cse.google.com/cse.js?cx=d68939519b1834f27">
+                </script>
 
                 <div className="gcse-search" />
             </div>
