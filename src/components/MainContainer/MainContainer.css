@@ -23,3 +23,10 @@
     min-height: 100px;
     min-width: 1000px;
 }
+
+.relatedProjectsHeader{
+    display: flex;
+    justify-Content: center;
+    width: 100%;
+    color:white;
+}
