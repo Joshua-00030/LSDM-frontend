@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'https://158.101.29.37:3001'
+const baseUrl = 'https://project-trace-backend.vercel.app:3001'
 
 const search = async props => {
   console.log(props)
