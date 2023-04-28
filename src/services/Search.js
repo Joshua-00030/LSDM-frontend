@@ -19,9 +19,13 @@ const generalSearch = async props => {
 }
 
 const getColumns = async props => {
-  console.log(props)
   const response = await axios.get(baseUrl+'/testdata/' + props)
   return response.data
 }
 
-export default { search, getColumns, getProject, generalSearch }
+const getRelatedProjects = async props => {
+  const response = await axios.post(baseUrl+'/testdata/relatedProjects', props)
+  return response.data
+}
+
+export default { search, getColumns, getProject, generalSearch, getRelatedProjects }
