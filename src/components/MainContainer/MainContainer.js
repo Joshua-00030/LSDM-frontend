@@ -18,8 +18,8 @@ const MainContainer = ({ setOrg, org, data }) => {
 
     useEffect(() => {
 
-        if (document.getElementById("4") !== null) {
-            const parentDiv = document.getElementById("4")
+        if (document.getElementById("23") !== null) {
+            const parentDiv = document.getElementById("23")
             const childDiv = parentDiv.querySelector(".CardTitle")
             const searchField = document.querySelector('#gsc-i-id1')
             if (searchField) {
