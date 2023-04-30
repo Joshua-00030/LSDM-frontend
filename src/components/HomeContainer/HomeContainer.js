@@ -7,7 +7,7 @@ import SearchService from '../../services/Search';
 
 const HomeContainer = () => {
     const [org, setOrg] = useState(null)
-    const [orgs, setOrgs] = useState(['Home','nsf','nih','doe','doj'])
+    const [orgs, setOrgs] = useState(['Home', 'Search'])
     const [data, setData] = useState([])
 
     useEffect(() => {

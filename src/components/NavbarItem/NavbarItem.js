@@ -4,7 +4,7 @@ const NavbarItem = ({ label, setOrg, org, setSearchTerms }) => {
 
     const handleClick = async () => {
         setOrg((label === 'Home' ? null : label))
-        setSearchTerms((label === 'Home' ? null : await SearchService.getColumns(label)))
+        setSearchTerms((label === 'Home' ? null : await SearchService.getColumns('nih')))
     }
 
     return (

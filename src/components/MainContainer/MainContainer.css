@@ -1,5 +1,5 @@
 .CardContainer {
-    background-color: blue;
+    background-color: #9895F0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -10,7 +10,7 @@
 }
 
 .default {
-    background-color: blue;
+    background-color: 9895F0;
     display: grid;
     width: 100%;
     overflow: scroll;

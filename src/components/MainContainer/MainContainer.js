@@ -18,14 +18,25 @@ const MainContainer = ({ setOrg, org, data }) => {
 
     useEffect(() => {
 
-        if (document.getElementById("4") !== null) {
-            const parentDiv = document.getElementById("4")
+        if (document.getElementById("project_title") !== null) {
+            const parentDiv = document.getElementById("project_title")
             const childDiv = parentDiv.querySelector(".CardTitle")
             const searchField = document.querySelector('#gsc-i-id1')
-            if (searchField) {
-                searchField.value = childDiv.textContent
-                const searchButton = document.querySelector('.gsc-search-button-v2')
-                searchButton.click()
+            if (document.getElementById("organization") !== null) {
+                const parentDiv2 = document.getElementById("organization")
+                const childDiv2 = parentDiv2.querySelector(".CardTitle")
+                const words = childDiv.textContent.split(' ')
+                if (searchField) {
+                    searchField.value = '"' + words.slice(0,4).join(' ') + '" ' + words.slice(4).join(' ') + ' ' + childDiv2.textContent
+                    const searchButton = document.querySelector('.gsc-search-button-v2')
+                    searchButton.click()
+                }
+            }else{
+                if (searchField) {
+                    searchField.value = '"' + childDiv.textContent + '"' 
+                    const searchButton = document.querySelector('.gsc-search-button-v2')
+                    searchButton.click()
+                }
             }
         }
     });
@@ -39,7 +50,9 @@ const MainContainer = ({ setOrg, org, data }) => {
                         if (key === 'number' && 'nih_reference' in newData) {
 
                         } else if (key === 'project_title') {
-                            cardArray.splice(1, 0, <SearchCard data={key} newData={newData[key]} handleClick={null} label={key} key={i} id={i} />)
+                            cardArray.splice(1, 0, <SearchCard data={key} newData={newData[key]} handleClick={null} label={key} key={i} id={'project_title'} />)
+                        } else if (key === 'organization') {
+                            cardArray.splice(1, 0, <SearchCard data={key} newData={newData[key]} handleClick={null} label={key} key={i} id={'organization'} />)
                         } else if (key === 'abstract') {
                             cardArray2.push(<SearchCard data={key} newData={newData[key]} handleClick={null} label={key} key={i} id={i} type={' Abstract'} />)
                         } else {
@@ -59,7 +72,7 @@ const MainContainer = ({ setOrg, org, data }) => {
                 <script async src="https://cse.google.com/cse.js?cx=d68939519b1834f27">
                 </script>
 
-                <div className="gcse-search" />
+                <div class="gcse-searchresults-only"></div>
             </div>
         </div>
     )

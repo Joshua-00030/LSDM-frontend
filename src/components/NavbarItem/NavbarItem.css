@@ -1,7 +1,7 @@
 .NavbarItem{
     display: flex;
-    background-color: aqua;
-    min-width: 9.5%;
+    background-color: #19A7CE;
+    min-width: 19.5%;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
@@ -10,14 +10,14 @@
 .NavbarItemSelected{
     display: flex;
     background-color: gold;
-    min-width: 9.5%;
+    min-width: 19.5%;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     margin: 5px;
 }
 .NavbarItemSelectedInner{
-    background-color: aqua;
+    background-color: #19A7CE;
     display: flex;
     justify-content: center;
     align-items: center;

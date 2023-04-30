@@ -5,12 +5,12 @@
     margin: 5px;
     padding: .2rem;
     border-radius: 10px;
-    background-color: blueviolet;
+    background-color: #EDEEF7;
     max-width: 50%;
     min-width: 5%;
 }
 .Back{
-    background-color: lawngreen;
+    background-color: #19A7CE;
     justify-content: center;
     min-width: 5%;
 }
@@ -31,7 +31,7 @@
     margin: 5px;
     border-radius: 30px;
     min-height: 10rem;
-    background-color: blueviolet;
+    background-color: #EDEEF7;
     max-width: 100%;
 }
 .relatedProject{
